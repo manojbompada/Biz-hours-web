@@ -1,0 +1,22 @@
+<div class="list-business">
+  <div class="container">
+    <app-filter-list></app-filter-list>
+    <div *ngFor="let item of listBusinessService.list" class="item-container">
+      <div class="item-name">{{item.name}}</div>
+      <div class="item-details">
+        <div><span class="item-subtitle">Business Phone Number</span> : <span>{{item.phoneNumber}}</span></div>
+        <div><span class="item-subtitle">Business Url</span> : <span>{{item.url}}</span></div>
+        <div class="business-schedule clearfix">
+          <div class="title">
+            Business Schedule:
+          </div>
+          <div class="schedule">
+            <div *ngFor="let s of item.businessSchedules">
+              {{dayConstant[s.dayId]}}: <span *ngIf="s.openTime>0 && s.closeTime>0">{{s.openTime}} - {{s.closeTime}}</span> <span *ngIf="s.openTime==0 && s.closeTime==0"> closed </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

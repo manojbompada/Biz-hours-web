@@ -1,0 +1,27 @@
+<div class="filter">
+  Filter :
+  <select class="day-select" (change)="onDayChange($event.target.value)">
+    <option selected="selected">
+      Select day
+    </option>
+    <option value="7">Sunday</option>
+    <option value="1">Monday</option>
+    <option value="2">Tuesday</option>
+    <option value="3">Wednesday</option>
+    <option value="4">Thursday</option>
+    <option value="5">Friday</option>
+    <option value="6">Saturday</option>
+  </select>
+  <input class="open-time-input" (change)="onOpenTimeChange($event.target.value)" type="number" min="1" max="12" placeholder="Open Time">
+  <select (change)="onOpenTimeAmPmChange($event.target.value)">
+    <option selected="selected" value="am">Am</option>
+    <option value="pm">Pm</option>
+  </select>
+  <input class="close-time-input" (change)="onCloseTimeChange($event.target.value)" type="number" min="0" max="12" placeholder="Close Time">
+  <select (change)="onCloseTimeAmPmChange($event.target.value)">
+    <option selected="selected" value="am">Am</option>
+    <option value="pm">Pm</option>
+  </select>
+  <button class="btn" (click)="apply()">Apply</button>
+  <button class="btn" (click)="reset()">Reset</button>
+</div>

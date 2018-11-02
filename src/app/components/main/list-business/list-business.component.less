@@ -1,0 +1,35 @@
+@import url('../../../styles/colors.less');
+@import url('../../../styles/fonts.less');
+@import url('../../../styles/common.less');
+
+.list-business {
+  .container {
+    border: 1px solid @blue;
+    padding: 20px 5px;
+    border-radius: 5px;
+
+    .item-container {
+      margin: 15px 20px;
+      .font-line-style('Crimson+Text', normal, 16px, 20px, 0.3px, black, none);
+
+      .item-name {
+        font-weight: bolder;
+        font-size: 24px;
+      }
+
+      .item-details {
+        margin: 10px 10px;
+
+        .business-schedule {
+          .title {
+            float: left;
+          }
+          .schedule {
+            float: left;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

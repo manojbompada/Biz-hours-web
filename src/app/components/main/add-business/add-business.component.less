@@ -1,0 +1,53 @@
+@import url('../../../styles/buttons.less');
+@import url('../../../styles/common.less');
+
+.add-business {
+  width: 100%;
+  .container {
+    margin: 10px 0px;
+    .form-container {
+      margin: 10px 0px;
+      form {
+        .business-schedule {
+          .hours-error {
+            color: red;
+          }
+          margin: 10px 5px;
+          .title {
+            float: left;
+          }
+          .schedule {
+            float: left;
+            .single-schedule {
+              margin: 5px 20px;
+              input {
+                width : 100px;
+                margin-left: 15px;
+                margin-right: 5px;
+              }
+              .hours {
+                margin: 5px 0px;
+              }
+            }
+          }
+        }
+        .form-btn {
+          margin: 15px 0px;
+        }
+        .form-group {
+          margin: 10px 5px;
+          input {
+            border-radius: 3px;
+          }
+          .is-invalid {
+            border-color: red;
+          }
+          .invalid-feedback {
+            color: red;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
