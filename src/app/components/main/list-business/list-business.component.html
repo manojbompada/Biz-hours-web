@@ -12,7 +12,17 @@
           </div>
           <div class="schedule">
             <div *ngFor="let s of item.businessSchedules">
-              {{dayConstant[s.dayId]}}: <span *ngIf="s.openTime>0 && s.closeTime>0">{{s.openTime}} - {{s.closeTime}}</span> <span *ngIf="s.openTime==0 && s.closeTime==0"> closed </span>
+              {{dayConstant[s.dayId]}}:
+              <span *ngIf="s.openTime>0 && s.closeTime>0">
+                <span *ngIf="s.openTime<12"> {{s.openTime}} AM </span>
+                <span *ngIf="s.openTime==12"> {{s.openTime}} PM </span>
+                <span *ngIf="s.openTime>12"> {{s.openTime-12}} PM </span>
+                 -
+                <span *ngIf="s.closeTime<12"> {{s.closeTime}} AM </span>
+                <span *ngIf="s.closeTime==12"> {{s.closeTime}} PM </span>
+                <span *ngIf="s.closeTime>12"> {{s.closeTime-12}} PM </span>
+              </span>
+              <span *ngIf="s.openTime==0 && s.closeTime==0"> closed </span>
             </div>
           </div>
         </div>
