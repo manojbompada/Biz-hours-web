@@ -16,7 +16,7 @@ export class ListBusinessService {
   getBusinessList(dayId?, openTime?, closeTime?) {
     let url = environment.APP.API_URL + '/businesses'+'?';
     if(dayId && dayId>0) {
-      url = url + 'day=' + dayId +'&';
+      url = url + 'dayId=' + dayId +'&';
     }
     if(openTime && openTime>0) {
       url = url + 'openTime=' + openTime+'&';
